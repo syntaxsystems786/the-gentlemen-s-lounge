@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="The Gentlemen's Lounge – Karachi's elite men's grooming destination. Precision cuts, beard sculpting, luxury experience.">
+  <title>The Gentlemen's Lounge | Luxury Grooming in Karachi</title>
+  <link rel="icon" type="image/jpeg" href="reference logo.jpg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { 'tgl-gold': '#C5A06F', 'tgl-dark': '#070707', 'tgl-black': '#030303' },
+          fontFamily: {
+            'serif': ['"Playfair Display"', 'serif'],
+            'sans': ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Smooth scrolling and basic resets */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #030303;
+      color: #f5f5f5;
+    }
+
+    ::selection {
+      background: #C5A06F;
+      color: #030303;
+    }
+
+    /* Subtle fade-in animations */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Elegant hover line for links */
+    .hover-line {
+      position: relative;
+    }
+
+    .hover-line::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: -4px;
+      left: 0;
+      background-color: #C5A06F;
+      transition: width 0.3s ease;
+    }
+
+    .hover-line:hover::after {
+      width: 100%;
+    }
+
+    /* WhatsApp FAB Animation */
+    .whatsapp-fab {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased selection:bg-tgl-gold selection:text-tgl-black">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b border-transparent">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-24 md:h-32">
+      <!-- Logo -->
+      <a href="#" class="relative z-10">
+        <img src="reference logo.jpg" alt="The Gentlemen's Lounge"
+          class="h-14 md:h-20 rounded-full border border-tgl-gold/20 shadow-[0_0_15px_rgba(197,160,111,0.1)]">
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="hidden md:flex gap-12 font-sans text-xs tracking-[0.25em] uppercase text-white/70">
+        <li><a href="#services" class="hover:text-tgl-gold transition-colors duration-300 hover-line">Services</a></li>
+        <li><a href="#expertise" class="hover:text-tgl-gold transition-colors duration-300 hover-line">Expertise</a>
+        </li>
+        <li><a href="#standard" class="hover:text-tgl-gold transition-colors duration-300 hover-line">The Standard</a>
+        </li>
+      </ul>
+
+      <!-- Mobile Toggle -->
+      <button id="navToggle" class="md:hidden flex flex-col gap-2 p-2 z-10" aria-label="Menu">
+        <span class="block w-8 h-[1px] bg-tgl-gold transition-all duration-300"></span>
+        <span class="block w-8 h-[1px] bg-tgl-gold transition-all duration-300 w-6 ml-auto"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+      class="fixed inset-0 bg-tgl-black/95 backdrop-blur-md flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+      <ul class="flex flex-col items-center gap-10 font-serif text-3xl text-white">
+        <li><a href="#services" class="hover:text-tgl-gold transition-colors italic">Services</a></li>
+        <li><a href="#expertise" class="hover:text-tgl-gold transition-colors italic">Expertise</a></li>
+        <li><a href="#standard" class="hover:text-tgl-gold transition-colors italic">The Standard</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-tgl-black px-6">
+    <!-- Subtle radial gradient to focus center -->
+    <div
+      class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(197,160,111,0.05)_0%,transparent_60%)] pointer-events-none">
+    </div>
+
+    <div class="relative z-10 text-center max-w-5xl mx-auto mt-20 fade-up">
+      <p class="font-sans text-tgl-gold tracking-[0.4em] uppercase text-[10px] md:text-xs mb-8">Established in Gulshan e
+        Iqbal, Karachi</p>
+
+      <h1
+        class="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] font-normal leading-[1.1] tracking-tight mb-8 text-white">
+        The Art of <br>
+        <span class="italic text-tgl-gold font-light">Gentlemen's</span> Grooming
+      </h1>
+
+      <p class="font-sans text-white/40 text-sm md:text-base font-light max-w-2xl mx-auto mb-16 leading-relaxed">
+        A sanctuary for the modern man. Experience unparalleled precision, authentic techniques, and a luxurious
+        atmosphere designed exclusively for you.
+      </p>
+
+      <a href="https://wa.me/923344765666?text=Salam!%20I'd%20like%20to%20book%20an%20appointment%20at%20The%20Gentlemen's%20Lounge..."
+        target="_blank"
+        class="group inline-flex items-center gap-4 border border-tgl-gold/30 hover:border-tgl-gold px-8 py-4 transition-all duration-500">
+        <span
+          class="font-sans text-xs tracking-[0.3em] uppercase text-tgl-gold group-hover:text-white transition-colors">Reserve
+          Your Chair</span>
+        <div class="w-8 h-[1px] bg-tgl-gold group-hover:w-12 transition-all duration-500"></div>
+      </a>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-50 fade-up"
+      style="transition-delay: 0.5s;">
+      <span class="font-sans text-[9px] tracking-[0.3em] uppercase">Scroll</span>
+      <div class="w-[1px] h-12 bg-gradient-to-b from-tgl-gold to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- SERVICES (The Menu) -->
+  <section id="services" class="py-32 md:py-48 bg-tgl-dark relative">
+    <div class="max-w-5xl mx-auto px-6 md:px-12">
+      <div class="mb-20 md:mb-32 flex flex-col md:flex-row justify-between items-end gap-8 fade-up">
+        <div>
+          <h2 class="font-serif text-4xl md:text-6xl font-normal text-white">Curated <span
+              class="italic text-tgl-gold">Services</span></h2>
+        </div>
+        <p class="font-sans text-white/40 text-xs tracking-[0.2em] uppercase max-w-xs md:text-right">Bespoke grooming
+          experiences tailored to your exact specifications.</p>
+      </div>
+
+      <!-- Service List (Editorial Style) -->
+      <div class="space-y-12 md:space-y-16">
+        <!-- Item 1 -->
+        <div class="group fade-up">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between border-b border-white/10 pb-6 mb-6 group-hover:border-tgl-gold/50 transition-colors duration-500">
+            <div>
+              <span class="font-serif italic text-tgl-gold text-xl mr-4 opacity-50">01.</span>
+              <h3
+                class="inline-block font-serif text-2xl md:text-4xl text-white/90 group-hover:text-white transition-colors">
+                The Signature Cut</h3>
+            </div>
+            <span class="font-sans text-tgl-gold tracking-widest text-sm mt-4 md:mt-0">Rs. [Price]</span>
+          </div>
+          <p class="font-sans text-white/40 font-light text-sm md:text-base leading-relaxed max-w-2xl md:ml-12">
+            Precision fading and refined scissor work, tailored to your facial structure. Finished with a classic hot
+            towel, premium styling products, and a sharp razor lineup.
+          </p>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="group fade-up">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between border-b border-white/10 pb-6 mb-6 group-hover:border-tgl-gold/50 transition-colors duration-500">
+            <div>
+              <span class="font-serif italic text-tgl-gold text-xl mr-4 opacity-50">02.</span>
+              <h3
+                class="inline-block font-serif text-2xl md:text-4xl text-white/90 group-hover:text-white transition-colors">
+                Beard Sculpting</h3>
+            </div>
+            <span class="font-sans text-tgl-gold tracking-widest text-sm mt-4 md:mt-0">Rs. [Price]</span>
+          </div>
+          <p class="font-sans text-white/40 font-light text-sm md:text-base leading-relaxed max-w-2xl md:ml-12">
+            Defining contours and blending lengths to enhance your jawline. Includes a deeply relaxing hot towel
+            preparation and a natural, flawlessly smooth straight razor finish.
+          </p>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="group fade-up">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between border-b border-white/10 pb-6 mb-6 group-hover:border-tgl-gold/50 transition-colors duration-500">
+            <div>
+              <span class="font-serif italic text-tgl-gold text-xl mr-4 opacity-50">03.</span>
+              <h3
+                class="inline-block font-serif text-2xl md:text-4xl text-white/90 group-hover:text-white transition-colors">
+                Complete Lounge Experience</h3>
+            </div>
+            <span class="font-sans text-tgl-gold tracking-widest text-sm mt-4 md:mt-0">Rs. [Price]</span>
+          </div>
+          <p class="font-sans text-white/40 font-light text-sm md:text-base leading-relaxed max-w-2xl md:ml-12">
+            The ultimate rejuvenation. Combines our Signature Haircut and Beard Sculpting with a deep-cleansing Charcoal
+            Facial and a tension-relieving head and shoulder massage.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE SECTION -->
+  <section id="expertise" class="py-32 md:py-48 bg-tgl-black">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+
+        <!-- Image Side -->
+        <div class="w-full lg:w-1/2 relative fade-up">
+          <div class="absolute -inset-4 border border-tgl-gold/20 translate-x-4 translate-y-4 pointer-events-none">
+          </div>
+          <!-- Real photo placeholder -->
+          <img src="barber-tools-placeholder.jpg"
+            alt="[EDITORIAL PHOTO: Authentic, high-resolution close-up of a classic straight razor and a premium badger hair shaving brush resting on a dark marble or wooden surface. Natural, soft studio lighting, sharp focus on the texture of the tools, dark and moody background. Natural, non-filtered, non-AI look.]"
+            class="relative z-10 w-full h-auto object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-1000 shadow-2xl">
+        </div>
+
+        <!-- Text Side -->
+        <div class="w-full lg:w-1/2 fade-up">
+          <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.1] text-white mb-10">
+            Mastering the <br><span class="italic text-tgl-gold">Craft</span>
+          </h2>
+
+          <div class="space-y-12">
+            <div>
+              <h4 class="font-sans text-xs tracking-[0.2em] uppercase text-tgl-gold mb-3">01 // The Barbers</h4>
+              <p class="font-sans text-white/50 font-light text-sm leading-relaxed">
+                Our team consists of true artisans. Years of dedicated practice ensure flawless execution of both
+                timeless classic styles and modern, highly-textured trends.
+              </p>
+            </div>
+
+            <div class="w-12 h-[1px] bg-white/10"></div>
+
+            <div>
+              <h4 class="font-sans text-xs tracking-[0.2em] uppercase text-tgl-gold mb-3">02 // The Environment</h4>
+              <p class="font-sans text-white/50 font-light text-sm leading-relaxed">
+                A bespoke space designed for relaxation and absolute privacy. From the lighting to the acoustics, every
+                detail is engineered for your ultimate comfort.
+              </p>
+            </div>
+
+            <div class="w-12 h-[1px] bg-white/10"></div>
+
+            <div>
+              <h4 class="font-sans text-xs tracking-[0.2em] uppercase text-tgl-gold mb-3">03 // The Tools</h4>
+              <p class="font-sans text-white/50 font-light text-sm leading-relaxed">
+                We honor the rich heritage of barbering by utilizing only the finest implements—perfectly balanced
+                straight razors, warming towels, and industry-leading grooming products.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- THE STANDARD (Why TGL) -->
+  <section id="standard" class="py-32 md:py-48 bg-tgl-dark border-t border-tgl-gold/10">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="text-center mb-24 fade-up">
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-6">The <span
+            class="italic text-tgl-gold">Standard</span></h2>
+        <p class="font-sans text-white/40 text-sm font-light max-w-md mx-auto">We don't compromise on quality. Our
+          foundational principles ensure you receive nothing but the absolute best.</p>
+      </div>
+
+      <!-- Minimalist Grid -->
+      <div class="grid md:grid-cols-2 gap-y-16 gap-x-24">
+        <div class="relative pl-8 md:pl-12 fade-up">
+          <div class="absolute left-0 top-0 bottom-0 w-[1px] bg-gradient-to-b from-tgl-gold/50 to-transparent"></div>
+          <h4 class="font-serif text-2xl text-white mb-4">Precision Focus</h4>
+          <p class="font-sans text-white/40 text-sm font-light leading-relaxed">Every cut is meticulously executed. We
+            take the time required to perfect every angle, fade, and line, refusing to rush the artistic process.</p>
+        </div>
+
+        <div class="relative pl-8 md:pl-12 fade-up">
+          <div class="absolute left-0 top-0 bottom-0 w-[1px] bg-gradient-to-b from-tgl-gold/50 to-transparent"></div>
+          <h4 class="font-serif text-2xl text-white mb-4">Filtered Water Only</h4>
+          <p class="font-sans text-white/40 text-sm font-light leading-relaxed">Hard water damages hair and skin. We
+            utilize a comprehensive filtration system to ensure only the purest water touches your scalp during washing
+            and treatments.</p>
+        </div>
+
+        <div class="relative pl-8 md:pl-12 fade-up">
+          <div class="absolute left-0 top-0 bottom-0 w-[1px] bg-gradient-to-b from-tgl-gold/50 to-transparent"></div>
+          <h4 class="font-serif text-2xl text-white mb-4">Pristine Environment</h4>
+          <p class="font-sans text-white/40 text-sm font-light leading-relaxed">A fully climate-controlled, immaculately
+            sanitized space. Implements are strictly sterilized, ensuring an environment that is as safe as it is
+            luxurious.</p>
+        </div>
+
+        <div class="relative pl-8 md:pl-12 fade-up">
+          <div class="absolute left-0 top-0 bottom-0 w-[1px] bg-gradient-to-b from-tgl-gold/50 to-transparent"></div>
+          <h4 class="font-serif text-2xl text-white mb-4">Exclusive Member Perks</h4>
+          <p class="font-sans text-white/40 text-sm font-light leading-relaxed">Our regulars enjoy priority booking
+            windows, complimentary beverage services, and exclusive access to premium, limited-edition grooming
+            products.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-tgl-black pt-24 pb-12 border-t border-white/5 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <img src="reference logo.jpg" alt="The Gentlemen's Lounge"
+        class="h-20 mx-auto mb-10 rounded-full border border-tgl-gold/20 opacity-80">
+
+      <p class="font-serif text-2xl md:text-3xl text-white/80 italic mb-12">"Grooming is the secret of real elegance."
+      </p>
+
+      <div
+        class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 mb-16 font-sans text-xs tracking-[0.2em] uppercase text-white/40">
+        <a href="#services" class="hover:text-tgl-gold transition-colors">Services</a>
+        <a href="#expertise" class="hover:text-tgl-gold transition-colors">Expertise</a>
+        <a href="#standard" class="hover:text-tgl-gold transition-colors">The Standard</a>
+      </div>
+
+      <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="font-sans text-white/30 text-[10px] tracking-widest uppercase">&copy; 2026 The Gentlemen's Lounge.
+          DHA, Karachi.</p>
+        <div class="flex items-center gap-3 text-white/20 text-[9px] tracking-[0.2em] uppercase">
+          <span>Digital Experience by</span>
+          <img src="syntax-systems-logo.png" alt="Syntax Systems" class="h-4 opacity-30 grayscale">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FAB -->
+  <a href="https://wa.me/923344765666?text=Salam!%20I'd%20like%20to%20book%20an%20appointment%20at%20The%20Gentlemen's%20Lounge..."
+    target="_blank" rel="noopener"
+    class="fixed bottom-8 right-8 z-[100] bg-tgl-gold text-tgl-black w-14 h-14 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(197,160,111,0.4)] hover:scale-110 transition-transform duration-300 whatsapp-fab"
+    aria-label="Book Appointment via WhatsApp">
+    <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      <path
+        d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.592-.826-6.326-2.207l-.441-.348-3.225 1.081 1.081-3.225-.348-.441A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+    </svg>
+  </a>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    let isMenuOpen = false;
+
+    navToggle.addEventListener('click', () => {
+      isMenuOpen = !isMenuOpen;
+
+      if (isMenuOpen) {
+        mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+        mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+        // Animate hamburger to X
+        navToggle.children[0].style.transform = 'translateY(5px) rotate(45deg)';
+        navToggle.children[1].style.transform = 'translateY(-4px) rotate(-45deg)';
+        navToggle.children[1].classList.remove('w-6');
+        navToggle.children[1].classList.add('w-8');
+      } else {
+        mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+        mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+        // Revert X to hamburger
+        navToggle.children[0].style.transform = 'none';
+        navToggle.children[1].style.transform = 'none';
+        navToggle.children[1].classList.remove('w-8');
+        navToggle.children[1].classList.add('w-6');
+      }
+    });
+
+    document.querySelectorAll('#mobileMenu a').forEach(l => {
+      l.addEventListener('click', () => {
+        navToggle.click(); // Close menu on link click
+      });
+    });
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('bg-tgl-black/90', 'backdrop-blur-md', 'border-white/5');
+        navbar.classList.remove('border-transparent');
+      } else {
+        navbar.classList.remove('bg-tgl-black/90', 'backdrop-blur-md', 'border-white/5');
+        navbar.classList.add('border-transparent');
+      }
+    });
+
+    // Intersection Observer for scroll animations (fade-up)
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>
